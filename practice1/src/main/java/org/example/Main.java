@@ -68,6 +68,7 @@ public class Main {
     // Task 2) SecureRandom
     private static void hashResultsSecureRandom(String alg, String input, FileWriter writer) throws Exception {
         SecureRandom sr = SecureRandom.getInstance(alg);
+        sr.setSeed(23445);
         sr.nextBytes(input.getBytes());
         long number = sr.nextLong();
         writer.append(number+"\n");
