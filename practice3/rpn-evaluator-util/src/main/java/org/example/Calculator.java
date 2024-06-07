@@ -1,17 +1,12 @@
-package org.example2;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+package org.example;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import static org.example2.RPNConvertor.convertToRPN;
-import static org.example2.RPNEvaluator.calculate;
-// mvn package -Pno-tests
-// mvn compile
+import static org.example.RPNConvertor.convertToRPN;
+import static org.example.RPNEvaluator.calculate;
+
 public class Calculator {
-    private static final Logger logger = LogManager.getLogger();
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,6 +19,5 @@ public class Calculator {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        logger.info("done execution");
     }
 }
