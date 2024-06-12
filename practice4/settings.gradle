@@ -1,0 +1,5 @@
+rootProject.name = 'practice4'
+include 'annotations'
+include 'app'
+include 'compiler'
+
